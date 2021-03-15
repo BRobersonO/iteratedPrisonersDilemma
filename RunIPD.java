@@ -27,7 +27,7 @@ public class RunIPD extends Object
          }  /* if */
       }  /* for i */
 
-      player1 = new StrategyTitForTwoTats();
+      player1 = new StrategyProbe("110");
       player2 = new StrategyTitForTat();
       ipd = new IteratedPD(player1, player2);
 

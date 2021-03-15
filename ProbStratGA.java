@@ -10,7 +10,7 @@ public class ProbStratGA extends FitnessFunction {
 *                              CONSTRUCTORS                                    *
 *******************************************************************************/
 
-	public ProbStrat(){
+	public ProbStratGA(){
 		name = "ProbStrat Problem";
 	}
 

@@ -66,5 +66,5 @@ public class PrisonersDilemma extends Object
    public int getPlayer1Payoff()  { return player1Payoff; }
    public int getPlayer2Payoff()  { return player2Payoff; }
 
-}  /* class PrisonersDilemmd */
+}  /* class PrisonersDilemma */
 

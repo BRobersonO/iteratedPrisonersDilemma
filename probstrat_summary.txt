@@ -1,0 +1,99 @@
+Experiment ID                :  probstrat
+Problem Type                 :  Probe
+Data Input File Name         :  NA
+Number of Runs               :  5
+Generations per Run          :  10
+Population Size              :  100
+Selection Method             :  2
+Fitness Scaling Type         :  0
+Min or Max Fitness           :  max
+Crossover Type               :  1
+Crossover Rate               :  1.0
+Mutation Type                :  1
+Mutation Rate                :  1.0E-4
+Random Number Seed           :  75982
+Number of Genes/Points       :  1
+Size of Genes                :  3
+
+
+ R   1		 G   0		 BestInG       3		 AvgOfG        1.45		 StDv        0.77		 95% ConfInt       1.296      1.604
+ R   1		 G   1		 BestInG       3		 AvgOfG        1.93		 StDv       0.756		 95% ConfInt       1.779      2.081
+ R   1		 G   2		 BestInG       3		 AvgOfG        2.23		 StDv       0.694		 95% ConfInt       2.091      2.369
+ R   1		 G   3		 BestInG       3		 AvgOfG        2.57		 StDv       0.624		 95% ConfInt       2.445      2.695
+ R   1		 G   4		 BestInG       3		 AvgOfG        2.87		 StDv       0.338		 95% ConfInt       2.802      2.938
+ R   1		 G   5		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   1		 G   6		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   1		 G   7		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   1		 G   8		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   1		 G   9		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+1      0        111   RawFitness
+                  7            3
+
+ R   2		 G   0		 BestInG       3		 AvgOfG        1.49		 StDv       0.798		 95% ConfInt        1.33       1.65
+ R   2		 G   1		 BestInG       3		 AvgOfG        1.96		 StDv       0.737		 95% ConfInt       1.813      2.107
+ R   2		 G   2		 BestInG       3		 AvgOfG        2.32		 StDv       0.634		 95% ConfInt       2.193      2.447
+ R   2		 G   3		 BestInG       3		 AvgOfG        2.63		 StDv       0.544		 95% ConfInt       2.521      2.739
+ R   2		 G   4		 BestInG       3		 AvgOfG        2.86		 StDv       0.349		 95% ConfInt        2.79       2.93
+ R   2		 G   5		 BestInG       3		 AvgOfG        2.99		 StDv         0.1		 95% ConfInt        2.97       3.01
+ R   2		 G   6		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   2		 G   7		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   2		 G   8		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   2		 G   9		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+2      0        111   RawFitness
+                  7            3
+
+ R   3		 G   0		 BestInG       3		 AvgOfG        1.54		 StDv       0.822		 95% ConfInt       1.376      1.704
+ R   3		 G   1		 BestInG       3		 AvgOfG        1.99		 StDv       0.785		 95% ConfInt       1.833      2.147
+ R   3		 G   2		 BestInG       3		 AvgOfG        2.43		 StDv       0.624		 95% ConfInt       2.305      2.555
+ R   3		 G   3		 BestInG       3		 AvgOfG        2.78		 StDv        0.44		 95% ConfInt       2.692      2.868
+ R   3		 G   4		 BestInG       3		 AvgOfG        2.99		 StDv         0.1		 95% ConfInt        2.97       3.01
+ R   3		 G   5		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   3		 G   6		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   3		 G   7		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   3		 G   8		 BestInG       3		 AvgOfG        2.99		 StDv         0.1		 95% ConfInt        2.97       3.01
+ R   3		 G   9		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+3      0        111   RawFitness
+                  7            3
+
+ R   4		 G   0		 BestInG       3		 AvgOfG        1.64		 StDv       0.927		 95% ConfInt       1.455      1.825
+ R   4		 G   1		 BestInG       3		 AvgOfG        2.12		 StDv       0.715		 95% ConfInt       1.977      2.263
+ R   4		 G   2		 BestInG       3		 AvgOfG        2.55		 StDv       0.557		 95% ConfInt       2.439      2.661
+ R   4		 G   3		 BestInG       3		 AvgOfG        2.86		 StDv       0.349		 95% ConfInt        2.79       2.93
+ R   4		 G   4		 BestInG       3		 AvgOfG        2.96		 StDv       0.197		 95% ConfInt       2.921      2.999
+ R   4		 G   5		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   4		 G   6		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   4		 G   7		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   4		 G   8		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   4		 G   9		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+4      0        111   RawFitness
+                  7            3
+
+ R   5		 G   0		 BestInG       3		 AvgOfG        1.52		 StDv       0.772		 95% ConfInt       1.366      1.674
+ R   5		 G   1		 BestInG       3		 AvgOfG        1.99		 StDv       0.785		 95% ConfInt       1.833      2.147
+ R   5		 G   2		 BestInG       3		 AvgOfG        2.49		 StDv       0.595		 95% ConfInt       2.371      2.609
+ R   5		 G   3		 BestInG       3		 AvgOfG         2.8		 StDv       0.426		 95% ConfInt       2.715      2.885
+ R   5		 G   4		 BestInG       3		 AvgOfG        2.98		 StDv       0.141		 95% ConfInt       2.952      3.008
+ R   5		 G   5		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   5		 G   6		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   5		 G   7		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   5		 G   8		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+ R   5		 G   9		 BestInG       3		 AvgOfG         3.0		 StDv         0.0		 95% ConfInt         3.0        3.0
+5      0        111   RawFitness
+                  7            3
+
+B               111   RawFitness
+                  7            3
+
+Gen            AvgOfAvgFit            AvgOfBestFit            StDvAvg            StDvAvgBst           95%ConfIntBst
+0              1.53                3.0                 0.06                0.0                 3.0                 3.0                 
+1              2.0                 3.0                 0.06                0.0                 3.0                 3.0                 
+2              2.4                 3.0                 0.12                0.0                 3.0                 3.0                 
+3              2.73                3.0                 0.11                0.0                 3.0                 3.0                 
+4              2.93                3.0                 0.06                0.0                 3.0                 3.0                 
+5              3.0                 3.0                 0.0                 0.0                 3.0                 3.0                 
+6              3.0                 3.0                 0.0                 0.0                 3.0                 3.0                 
+7              3.0                 3.0                 0.0                 0.0                 3.0                 3.0                 
+8              3.0                 3.0                 0.0                 0.0                 3.0                 3.0                 
+9              3.0                 3.0                 0.0                 0.0                 3.0                 3.0                 
+
+Best Each Run: Average		3.0                 Best Each Run: StDv	0.0                 Best Each Run: 95%ConInt	3.0                 3.0                 
