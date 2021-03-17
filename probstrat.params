@@ -1,7 +1,7 @@
 Experiment ID                :probstrat
 Problem Type                 :Probe
 Data Input File Name         :NA
-Number of Runs               :5
+Number of Runs               :50
 Generations per Run          :10
 Population Size              :100
 Selection Method (1)         :2

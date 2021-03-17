@@ -57,8 +57,8 @@ public class Search {
 	private static double fitnessStats[][];  // 0=Avg, 1=Best, 2=sum of squares of avgs, 3=sum of sqs of bests
 	private static int bestEaRun[];
 
-	public static int bestEaRunSum = 0;
-	public static int bestEaRunSum2 = 0;
+	public static double bestEaRunSum = 0;
+	public static double bestEaRunSum2 = 0;
 	public static double bestEaRunAvg = 0;
 	public static double stDvR = 0; //stdv from best in each run
 	public static double bestEaLow = 0;
@@ -230,7 +230,7 @@ public class Search {
 				ninetyFiveHigh = averageRawFitness + (stdevRawFitness / Math.sqrt(Parameters.popSize)) * 2;
 
 				// Output generation statistics to screen
-				System.out.println(R + "\t" + G +  "\t" + (int)bestOfGenChromo.rawFitness + "\t" + averageRawFitness + "\t" + stdevRawFitness);
+				System.out.println(R + "\t" + G +  "\t" + bestOfGenChromo.rawFitness + "\t" + averageRawFitness + "\t" + stdevRawFitness);
 
 				// Output generation statistics to summary file
 				summaryOutput.write(" R ");
@@ -238,7 +238,7 @@ public class Search {
 				summaryOutput.write("\t\t G ");
 				Hwrite.right(G, 3, summaryOutput);
 				summaryOutput.write("\t\t BestInG ");
-				Hwrite.right((int)bestOfGenChromo.rawFitness, 7, summaryOutput);
+				Hwrite.right(bestOfGenChromo.rawFitness, 11, 3, summaryOutput);
 				summaryOutput.write("\t\t AvgOfG ");
 				Hwrite.right(averageRawFitness, 11, 3, summaryOutput);
 				summaryOutput.write("\t\t StDv ");
@@ -383,12 +383,12 @@ public class Search {
 			Hwrite.right(bestOfRunG, 4, summaryOutput);
 
 			//bestEaRun[R] = bestOfRunR;
-			bestEaRunSum += (int)bestOfRunChromo.rawFitness;
-			bestEaRunSum2 += (int)bestOfRunChromo.rawFitness * (int)bestOfRunChromo.rawFitness;
+			bestEaRunSum += bestOfRunChromo.rawFitness;
+			bestEaRunSum2 += bestOfRunChromo.rawFitness * bestOfRunChromo.rawFitness;
 
 			problem.doPrintGenes(bestOfRunChromo, summaryOutput);
 
-			System.out.println(R + "\t" + "B" + "\t"+ (int)bestOfRunChromo.rawFitness);
+			System.out.println(R + "\t" + "B" + "\t"+ bestOfRunChromo.rawFitness);
 
 		} //End of a Run
 

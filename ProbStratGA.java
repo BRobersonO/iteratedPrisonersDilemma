@@ -23,10 +23,25 @@ public class ProbStratGA extends FitnessFunction {
 	public void doRawFitness(Chromo X){
 
 		X.rawFitness = 0;
-		for (int z=0; z<Parameters.numGenes * Parameters.geneSize; z++){
-            //TODO: RUN TOURNAMENT to get fitness
-			if (X.chromo.charAt(z) == '1') X.rawFitness += 1;
-		}
+        
+        //TODO: RUN TOURNAMENT to get fitness
+
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyAlwaysCooperate());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyAlwaysDefect());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyGradual());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyGradualEvolve(X.chromo));
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyHardMajo());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyHardTitForTat());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyPavlov());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyProbe(X.chromo));
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyRandom());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategySlowTitForTat());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategySoftMajo());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategySuspiciousTitForTat());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyTitForTat());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyTitForTwoTats());
+
+        X.rawFitness /= 14;
 	}
 
 //  PRINT OUT AN INDIVIDUAL GENE TO THE SUMMARY FILE *********************************
@@ -39,9 +54,9 @@ public class ProbStratGA extends FitnessFunction {
 		output.write("   RawFitness");
 		output.write("\n        ");
 		for (int i=0; i<Parameters.numGenes; i++){
-			Hwrite.right(X.getPosIntGeneValue(i),11,output);
+			Hwrite.right(X.getPosIntGeneValue(i), 11, 3, output);
 		}
-		Hwrite.right((int) X.rawFitness,13,output);
+		Hwrite.right( X.rawFitness, 13, 3, output);
 		output.write("\n\n");
 		return;
 	}
