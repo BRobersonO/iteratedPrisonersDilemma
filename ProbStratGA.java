@@ -32,6 +32,7 @@ public class ProbStratGA extends FitnessFunction {
         X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyHardMajo());
         X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyHardTitForTat());
         X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyPavlov());
+        X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyProbe("100"));
         X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyProbe(X.chromo));
         X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyRandom());
         X.rawFitness += RunIPD.runTourney(X.chromo, new StrategySlowTitForTat());
@@ -40,7 +41,7 @@ public class ProbStratGA extends FitnessFunction {
         X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyTitForTat());
         X.rawFitness += RunIPD.runTourney(X.chromo, new StrategyTitForTwoTats());
 
-        X.rawFitness /= 14; //averaged across 14 opponents
+        X.rawFitness /= 15; //averaged across 14 opponents
 	}
 
 //  PRINT OUT AN INDIVIDUAL GENE TO THE SUMMARY FILE *********************************

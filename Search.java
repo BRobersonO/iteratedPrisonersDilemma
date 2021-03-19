@@ -69,7 +69,7 @@ public class Search {
 	public static double conIntLow = 0;
 	public static double conIntHigh = 0;
 
-
+	public static List<String> bestChromoEaRun = new ArrayList<String>();
 
 /*******************************************************************************
 *                              CONSTRUCTORS                                    *
@@ -388,6 +388,9 @@ public class Search {
 
 			problem.doPrintGenes(bestOfRunChromo, summaryOutput);
 
+			//Add best of run to list!
+			bestChromoEaRun.add(bestOfRunChromo.chromo);
+
 			System.out.println(R + "\t" + "B" + "\t"+ bestOfRunChromo.rawFitness);
 
 		} //End of a Run
@@ -458,6 +461,22 @@ public class Search {
 		Hwrite.left(bestEaHigh, 20, 2, summaryOutput);
 
 		summaryOutput.write("\n");
+		summaryOutput.write("\n");
+
+		Map<String, Integer> frequencies = new HashMap<String, Integer>();
+		for(String i : bestChromoEaRun) {
+			Integer j = frequencies.get(i);
+			frequencies.put(i, (j == null) ? 1 : j + 1);
+		}
+
+		for(Map.Entry<String, Integer> freq : frequencies.entrySet()) {
+			summaryOutput.write("A Best of Run Individual:	");
+			Hwrite.left(freq.getKey(), 20,  summaryOutput);
+			summaryOutput.write("How many Runs it's the best:	");
+			Hwrite.left(freq.getValue(), 20, 2, summaryOutput);
+			summaryOutput.write("\n");
+		}
+
 		summaryOutput.close();
 
 		System.out.println();
