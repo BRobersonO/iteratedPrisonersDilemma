@@ -184,8 +184,35 @@ public class Chromo
 			break;
 
 		case 2:     //  Two Point Crossover
+			xoverPoint1 = 1 + (int)(Search.r.nextDouble() * (Parameters.numGenes * Parameters.geneSize-1));
+			xoverPoint2 = 1 + (int)(Search.r.nextDouble() * (Parameters.numGenes * Parameters.geneSize-1));
+
+			if (xoverPoint1 > xoverPoint2){
+				int temp = xoverPoint1;
+				xoverPoint1 = xoverPoint2;
+				xoverPoint2 = temp;
+			}
+
+			//  Create child chromosome from parental material
+			child1.chromo = parent1.chromo.substring(0,xoverPoint1) + parent2.chromo.substring(xoverPoint1, xoverPoint2) + parent1.chromo.substring(xoverPoint2);
+			child2.chromo = parent2.chromo.substring(0,xoverPoint1) + parent1.chromo.substring(xoverPoint1, xoverPoint2) + parent2.chromo.substring(xoverPoint2);
+			break;
 
 		case 3:     //  Uniform Crossover
+			child1.chromo = "";
+			child2.chromo = "";
+			for (int i=0;i<Parameters.numGenes * Parameters.geneSize;i++){
+				randnum = Search.r.nextDouble();
+				if (randnum > 0.5){
+					child1.chromo += parent1.chromo.charAt(i);
+					child2.chromo += parent2.chromo.charAt(i);
+				}
+				else{
+					child1.chromo += parent2.chromo.charAt(i);
+					child2.chromo += parent1.chromo.charAt(i);
+				}
+			}
+			break;
 
 		default:
 			System.out.println("ERROR - Bad crossover method selected");

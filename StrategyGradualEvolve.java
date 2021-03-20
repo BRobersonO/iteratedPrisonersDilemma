@@ -17,6 +17,9 @@ public class StrategyGradualEvolve extends Strategy
   int punish_scale;
   int cooldown_scale;
 
+  int calm_count;
+  int iteration;
+
   // 0 = defect, 1 = cooperate
 
   public StrategyGradualEvolve(String probe)
@@ -29,6 +32,9 @@ public class StrategyGradualEvolve extends Strategy
     this.probe = probe;
     this.punish_scale = calculatePunishScale(probe);
     this.cooldown_scale = calculateCooldownScale(probe);
+
+    calm_count = 0;
+    iteration = -1;
 
     // System.out.println("punish_scale: " + punish_scale);
     // System.out.println("cooldown_scale: " + cooldown_scale);
@@ -57,30 +63,58 @@ public class StrategyGradualEvolve extends Strategy
   {
     int maxPunishScale = (int)(Math.pow(2, (int)((probe.length()+1)/2))) - 1;
 
+    iteration++;
+    if(iteration == 0) return 1;
+    if(punish_count > 0){
+      punish_count--;
+      if(opponentLastMove == 0) defect_n++;
+      return 0;
+    }
+    if(calm_count > 0){
+      calm_count--;
+      if(opponentLastMove == 0) defect_n++;
+      return 1;
+    }
     if(opponentLastMove == 0){
-      // System.out.println("Opp Last: " + opponentLastMove);
-      isHot = true;
       defect_n++;
+      // punish_count = defect_n - 1;
       if(punish_scale == maxPunishScale){
-        punish_count = defect_n;
+        punish_count = defect_n - 1;
       }
       else{
-        punish_count = punish_scale;
+        punish_count = punish_scale - 1;
       }
-      // punish_count = defect_n;
-    }
-
-    if(isHot == true){
-      punish_count--;
-      if(punish_count == -1 * cooldown_scale){
-        isHot = false;
-      }
-      if(punish_count < 0){
-        return 1;
-      }
+      // calm_count = 2;
+      calm_count = cooldown_scale;
       return 0;
     }
     return 1;
+
+
+    // if(opponentLastMove == 0){
+    //   // System.out.println("Opp Last: " + opponentLastMove);
+    //   isHot = true;
+    //   defect_n++;
+    //   if(punish_scale == maxPunishScale){
+    //     punish_count = defect_n;
+    //   }
+    //   else{
+    //     punish_count = punish_scale;
+    //   }
+    //   // punish_count = defect_n;
+    // }
+    //
+    // if(isHot == true){
+    //   punish_count--;
+    //   if(punish_count == -1 * cooldown_scale){
+    //     isHot = false;
+    //   }
+    //   if(punish_count < 0){
+    //     return 1;
+    //   }
+    //   return 0;
+    // }
+    // return 1;
   }
 
 }  /* class StrategyGradualEvolve */
